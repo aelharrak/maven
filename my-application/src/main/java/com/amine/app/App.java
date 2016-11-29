@@ -1,13 +1,13 @@
 package com.amine.app;
-
-/**
- * Hello world!
- *
- */
+ 
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public int somme(int a, int b){
+        return a + b;
     }
+     
+    public String printHello(String name){
+        return "Hello, "+ name;
+    }
+    
 }

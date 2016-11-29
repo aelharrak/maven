@@ -1,38 +1,24 @@
 package com.amine.app;
-
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+ 
+import static org.junit.Assert.assertEquals;
+ 
+import org.junit.Before;
+import org.junit.Test;
+ 
+public class AppTest {
+    App app;
+    @Before public void initialize() {
+        app = new App();
     }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+     
+    @Test
+    public void testSomme(){
+        assertEquals(app.somme(1, 2), 3);
     }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+ 
+    @Test
+    public void testPrintHello(){
+        assertEquals(app.printHello("amine"), "Hello, amine");
+    } 
+     
 }
